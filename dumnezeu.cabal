@@ -1,0 +1,44 @@
+cabal-version:      3.14
+
+name:               dumnezeu
+
+version:            0.1.0.0
+
+synopsis:           Odin language subset compiler
+
+license:            BSD-3-Clause
+
+license-file:       LICENSE
+
+author:             Andre Rottenfront
+
+maintainer:         rottenfront@atomicmail.io
+
+category:           Language
+build-type:         Simple
+
+extra-doc-files:    CHANGELOG.md
+
+common defaults
+    ghc-options: -Wall -Wcompat
+    default-language: GHC2021
+
+executable dumnezeu
+    import: defaults
+
+    hs-source-dirs: app
+    main-is: Main.hs
+
+library
+    import: defaults
+
+    hs-source-dirs: src
+
+    build-depends:
+        base ^>=4.20.2.0,
+        parsec ^>=3.1.18.0
+
+    exposed-modules:
+        Dumnezeu.Parser
+
+
