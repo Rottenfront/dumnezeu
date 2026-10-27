@@ -1,6 +1,7 @@
 # Cabal build output
 dist/
 dist-newstyle/
+generated/
 .cabal-sandbox/
 cabal.sandbox.config
 

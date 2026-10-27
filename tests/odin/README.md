@@ -1,6 +1,6 @@
 # Odin source fixtures
 
-Standalone Odin programs (`package main`, one file each) for exercising a future Odin parser and semantic checker. They are source fixtures only: no runner in this repository consumes them yet. Until an Odin parser runner exists, nothing under `tests/odin/` is wired into Cabal or executed automatically.
+Standalone Odin programs (`package main`, one file each) for exercising the parser and a future semantic checker. `nix-shell --run 'cabal test --test-show-details=direct'` parses every fixture using the generated Haskell parser. Both the valid programs and the semantic-error fixtures must parse successfully. Cabal does not execute the Odin programs or perform semantic checks; use the reference Odin compiler for those checks.
 
 The syntax follows `resources/odin.ebnf` and `resources/syntax-overview.md`.
 
