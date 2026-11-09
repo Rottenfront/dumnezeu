@@ -5,7 +5,10 @@ let
 in
 pkgs.mkShell {
   packages = [
-    (haskell.ghcWithPackages (ps: [ ps.parsec ]))
+    (haskell.ghcWithPackages (ps: [
+      ps.parsec
+      ps.pretty-simple
+    ]))
     haskell.haskell-language-server
     haskell.implicit-hie
     pkgs.fourmolu

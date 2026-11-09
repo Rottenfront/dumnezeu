@@ -47,6 +47,7 @@ executable dumnezeu
     main-is: Main.hs
     build-depends:
         base ^>=4.20.2.0,
+        pretty-simple ^>=4.1.3.0,
         dumnezeu
 
 library
